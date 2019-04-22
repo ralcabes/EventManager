@@ -28,7 +28,14 @@
         <h4> <b> {{ form.description.label }} </b> </h4>
         <h4> {{ form.description }} </h4>
         <h4> <b> Birthdate:</b> <br>
-            <input type="date" id="birthdate" class="birthdate" name="birthdate" value="{{birthdate}}">
+            <var>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate();
+                document.getElementById("date").innerHTML = y + "-" + m + "-" + d;
+            </var>
+            <input type="date" id="birthdate" class="birthdate" name="birthdate" value="{{birthdate}}" max="y + "-" + m + "-" + d">
         </h4>
         <br>
         <button class="btn btn-primary btn-lg btn-block" type="submit">
